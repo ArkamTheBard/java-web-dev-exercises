@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class CountingChars {
     public static void main(String[] args) {
-        File readFromFile = new File(args[0]);
+        File readFromFile = new File(args[0]); //reads file name from terminal, use java CountingChars.java filename
         Scanner input = null;
         try {
             input = new Scanner(readFromFile);
