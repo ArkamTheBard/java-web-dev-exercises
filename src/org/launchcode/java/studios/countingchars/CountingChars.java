@@ -19,7 +19,8 @@ public class CountingChars {
         String inputString = "";
 
         while(input.hasNextLine()){
-            inputString = input.nextLine();
+            String data = input.nextLine();
+            inputString += data;
         }
 
 //        System.out.println("Enter a string to be read:");
