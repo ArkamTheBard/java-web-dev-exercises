@@ -11,8 +11,9 @@ public class SchoolPractice {
 //        System.out.println(myself.getGpa());
 //
 //        System.out.println(myself.equals(yaBoi));
+        Teacher newTeacher = new Teacher("Last", "First");
 
-        Course algebra = new Course("algebra", 101);
+        Course algebra = new Course("algebra", 101, newTeacher);
 
         algebra.addToRoster(myself, 2.5);
         algebra.addToRoster(yaBoi, 4.0);

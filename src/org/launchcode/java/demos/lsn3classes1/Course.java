@@ -6,34 +6,38 @@ import java.util.Map;
 public class Course {
     private String name;
     private int number;
+    private Teacher instructor;
     private HashMap<Student, Double> roster;
 
-    public Course(String name, int number, HashMap<Student, Double> roster){
+    public Course(String name, int number, Teacher instructor, HashMap<Student, Double> roster){
         if(name == null || name.equals("") || Integer.toString(number).equals("")){
             throw new IllegalArgumentException("Illegal argument");
         }else if(roster == null) {
             this.name = name;
             this.number = number;
+            this.instructor = instructor;
             this.roster = new HashMap<>();
         }else{
             this.name = name;
             this.number = number;
+            this.instructor = instructor;
             this.roster = roster;
         }
     }
 
-    public Course(String name, int number) {
+    public Course(String name, int number, Teacher instructor) {
         if (name == null || name.equals("") || Integer.toString(number).equals("")) {
             throw new IllegalArgumentException("Illegal argument");
         } else {
             this.name = name;
             this.number = number;
+            this.instructor = instructor;
             this.roster = new HashMap<>();
         }
     }
 
     public String toString(){
-        return this.name + " " + this.number + "\n current class roster: " + roster.toString();
+        return this.name + " " + this.number + " " + this.instructor.getFirstName() + " " + this.instructor.getLastName() + " years teaching: " + this.instructor.getYearsTeaching() + "\n current class roster: " + roster.toString();
     }
 
     public boolean equals(Object toBeCompared){

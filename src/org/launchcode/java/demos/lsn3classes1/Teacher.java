@@ -3,20 +3,18 @@ package org.launchcode.java.demos.lsn3classes1;
 public class Teacher {
     private String lastName;
     private String firstName;
-    private String subject;
+//    private String subject;
     private int yearsTeaching;
 
-    public Teacher(String lastName, String firstName, String subject, int yearsTeaching){
+    public Teacher(String lastName, String firstName, int yearsTeaching){
         setLastName(lastName);
         setFirstName(firstName);
-        setSubject(subject);
         this.yearsTeaching = yearsTeaching;
     }
 
-    public Teacher(String lastName, String firstName, String subject){ //in the case of a new teacher
+    public Teacher(String lastName, String firstName){ //in the case of a new teacher
         setLastName(lastName);
         setFirstName(firstName);
-        setSubject(subject);
         this.yearsTeaching = 0;
     }
 
@@ -34,12 +32,12 @@ public class Teacher {
             throw new IllegalArgumentException("Illegal name");
     }
 
-    public void setSubject(String subject) {
-        if(subject != null || !subject.isEmpty()){
-            this.subject = subject;
-        }else
-            throw new IllegalArgumentException("Illegal subject");
-    }
+//    public void setSubject(String subject) {
+//        if(subject != null || !subject.isEmpty()){
+//            this.subject = subject;
+//        }else
+//            throw new IllegalArgumentException("Illegal subject");
+//    }
 
     public void setYearsTeaching(int yearsTeaching) {
         this.yearsTeaching = yearsTeaching;
@@ -52,10 +50,10 @@ public class Teacher {
     public String getFirstName() {
         return firstName;
     }
-
-    public String getSubject() {
-        return subject;
-    }
+//
+//    public String getSubject() {
+//        return subject;
+//    }
 
     public int getYearsTeaching() {
         return yearsTeaching;
