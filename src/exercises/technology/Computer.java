@@ -4,9 +4,9 @@ public class Computer extends AbstractEntity {
     private boolean isOn;
     private String instructionSet;
     private double cpuFrequency;
-    private int id;
 
     public Computer(boolean isOn, String instructionSet, double cpuFrequency){
+        super();
         this.isOn = isOn;
         this.instructionSet = instructionSet;
         this.cpuFrequency = cpuFrequency;
@@ -34,13 +34,5 @@ public class Computer extends AbstractEntity {
 
     public  String keyboardType() {
         return "external";
-    }
-
-    public void setId(int id){
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
     }
 }

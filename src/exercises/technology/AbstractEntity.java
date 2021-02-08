@@ -1,8 +1,17 @@
 package exercises.technology;
 
+import java.util.Date;
+
 public abstract class AbstractEntity {
 
-    public AbstractEntity(){}
+    private long id;
 
-    public abstract void setId(int id);
+    public AbstractEntity(){
+        Date date = new Date();
+        id = date.getTime();
+    }
+
+    public long getId() {
+        return this.id;
+    }
 }

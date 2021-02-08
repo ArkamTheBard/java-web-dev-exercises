@@ -62,11 +62,5 @@ public class test {
         assertEquals(test_phone.getInstructionSet(), "ARM");
     }
 
-    @Test
-    public void laptopSetID(){
-        test_laptop.setId(888);
-        assertEquals(test_laptop.getId(), 888);
-    }
-
 
 }
